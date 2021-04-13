@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// actually that should be redone with a switch/case
+
 int calculator(string userOpp, int a = 0, int b = 0) {
     int Result;
     if(userOpp == "+") {
