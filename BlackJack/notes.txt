@@ -1,0 +1,6 @@
+    /*PlayingCard *aceOfHearts = new PlayingCard();
+    (*playingCard2).showCard();
+    derefrence first, then call the member method
+    aceOfHearts->showCard();
+    aceOfHearts->setName("Ace of Hearts");
+    delete aceOfHearts; */
