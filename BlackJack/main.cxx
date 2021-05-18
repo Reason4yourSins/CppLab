@@ -8,6 +8,6 @@ using namespace std;
 
 int main(int argc, const char** argv) {
     srand((int)time(NULL));
-    playersHand();
+    cout << "Nothing here yet..." << endl;
     return 0;
 }

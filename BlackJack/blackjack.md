@@ -8,8 +8,9 @@
 4. Maximal 4 Karten pro Spieler
 5. Beginn: jeder erhält 2 Karten
 6. Jeder erhält die Option zu ziehen
-7. 
+7. Maximal 2 Karten können gezogen werden
 
 ## Bot Logik
 
-1. Bot zieht bis Kartenwert 16
+1. Bot erhält seine Karten vor dem Spieler verdeckt
+2. Bot zieht dritte Karte bis Gesammtwert 17
