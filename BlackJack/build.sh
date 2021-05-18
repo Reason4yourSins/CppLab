@@ -1,1 +1,1 @@
-g++ -o blackjack main.cxx playingCard.cxx
+g++11 -o blackjack main.cxx playingCard.cxx

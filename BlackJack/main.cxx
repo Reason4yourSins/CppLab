@@ -1,9 +1,10 @@
 #include <iostream>
-#include <array>
 #include <stdlib.h>
 #include <ctime>
 #include "cards.hxx"
 #include "playingCard.hxx"
+#include "player.hxx"
+#include "bot.hxx"
 using namespace std;
 
 int main(int argc, const char** argv) {

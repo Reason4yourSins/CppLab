@@ -1,12 +1,10 @@
+#ifndef CARDS
+#define CARDS
 #include "playingCard.hxx"
-// #include <vector>
 #include <iostream>
 #include <array>
 #include <string>
 #include <cstdlib>
-#include <ctime>
-
-// const std::vector<std::string> deckOfCards = {"Ace of Hearts", "King of Hearts", "Six of Clubs"};
 
 std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Two", "Hearts", 2),
@@ -70,23 +68,6 @@ int randomNumber() {
 
 PlayingCard drawCard() {
     int tempInt = randomNumber();
-    int worthOfCard = deckOfCards.at(tempInt).getCardWorth();
     return deckOfCards.at(tempInt);
 }
-
-void playersHand() {
-    PlayingCard drawnCard = drawCard();
-    std::cout << drawnCard << std::endl;
-}
-
-int botHand() {
-    int botCardOne = randomNumber();
-    int botCardTwo = randomNumber();
-
-    deckOfCards.at(botCardOne).getCardName();
-    int botCardSum = deckOfCards.at(botCardOne).getCardWorth();
-
-    deckOfCards.at(botCardTwo).getCardName();
-    botCardSum += deckOfCards.at(botCardTwo).getCardWorth();
-    return botCardSum;
-}
+#endif

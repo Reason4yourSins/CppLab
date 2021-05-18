@@ -2,15 +2,18 @@
 
 ## Anforderungen
 
-1. es gibt 52 Spielkarten                                - done
-2. es wird 2 Spieler geben, einen Spieler und einen Bot
-3. Anwendung wird auf der CL laufen
-4. Maximal 4 Karten pro Spieler
-5. Beginn: jeder erhält 2 Karten
-6. Jeder erhält die Option zu ziehen
-7. Maximal 2 Karten können gezogen werden
+01. es gibt 52 Spielkarten                                  - done
+02. es wird 2 Spieler geben, einen Spieler und einen Bot
+03. Anwendung wird auf der CL laufen
+04. Maximal 4 Karten pro Spieler
+05. Beginn: jeder erhält 2 Karten
+06. Jeder erhält die Option zu ziehen
+07. Maximal 2 Karten können gezogen werden
+08. Wer näher an einem Gesammtwert von 21 ist, hat gewonnen 
+09. Bot und spieler brauchen eine dynamisch befüllbare Hand
+10. Karten können nicht abgelegt werden
 
 ## Bot Logik
 
-1. Bot erhält seine Karten vor dem Spieler verdeckt
-2. Bot zieht dritte Karte bis Gesammtwert 17
+01. Bot erhält seine Karten verdeckt
+02. Bot zieht dritte Karte bis Gesammtwert 17
