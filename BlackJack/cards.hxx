@@ -1,5 +1,6 @@
 #include "tryout.hxx"
 // #include <vector>
+#include <iostream>
 #include <array>
 #include <string>
 #include <cstdlib>
@@ -7,7 +8,7 @@
 
 // const std::vector<std::string> deckOfCards = {"Ace of Hearts", "King of Hearts", "Six of Clubs"};
 
-const std::array<PlayingCard, 52> deckOfCards = {
+std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Two", "Hearts", 2),
     PlayingCard("Three", "Hearts", 3),
     PlayingCard("Four", "Hearts", 4),
@@ -17,10 +18,10 @@ const std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Eight", "Hearts", 8),
     PlayingCard("Nine", "Hearts", 9),
     PlayingCard("Ten", "Hearts", 10),
-    PlayingCard("Jack", "Hearts", 11),
-    PlayingCard("Queen", "Hearts", 12),
-    PlayingCard("King", "Hearts", 13),
-    PlayingCard("Ace", "Hearts", 14),
+    PlayingCard("Jack", "Hearts", 10),
+    PlayingCard("Queen", "Hearts", 10),
+    PlayingCard("King", "Hearts", 10),
+    PlayingCard("Ace", "Hearts", 11),
     PlayingCard("Two", "Spades", 2),
     PlayingCard("Three", "Spades", 3),
     PlayingCard("Four", "Spades", 4),
@@ -30,10 +31,10 @@ const std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Eight", "Spades", 8),
     PlayingCard("Nine", "Spades", 9),
     PlayingCard("Ten", "Spades", 10),
-    PlayingCard("Jack", "Spades", 11),
-    PlayingCard("Queen", "Spades", 12),
-    PlayingCard("King", "Spades", 13),
-    PlayingCard("Ace", "Spades", 14),
+    PlayingCard("Jack", "Spades", 10),
+    PlayingCard("Queen", "Spades", 10),
+    PlayingCard("King", "Spades", 10),
+    PlayingCard("Ace", "Spades", 11),
     PlayingCard("Two", "Diamonds", 2),
     PlayingCard("Three", "Diamonds", 3),
     PlayingCard("Four", "Diamonds", 4),
@@ -43,10 +44,10 @@ const std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Eight", "Diamonds", 8),
     PlayingCard("Nine", "Diamonds", 9),
     PlayingCard("Ten", "Diamonds", 10),
-    PlayingCard("Jack", "Diamonds", 11),
-    PlayingCard("Queen", "Diamonds", 12),
-    PlayingCard("King", "Diamonds", 13),
-    PlayingCard("Ace", "Diamonds", 14),
+    PlayingCard("Jack", "Diamonds", 10),
+    PlayingCard("Queen", "Diamonds", 10),
+    PlayingCard("King", "Diamonds", 10),
+    PlayingCard("Ace", "Diamonds", 11),
     PlayingCard("Two", "Clubs", 2),
     PlayingCard("Three", "Clubs", 3),
     PlayingCard("Four", "Clubs", 4),
@@ -56,14 +57,44 @@ const std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Eight", "Clubs", 8),
     PlayingCard("Nine", "Clubs", 9),
     PlayingCard("Ten", "Clubs", 10),
-    PlayingCard("Jack", "Clubs", 11),
-    PlayingCard("Queen", "Clubs", 12),
-    PlayingCard("King", "Clubs", 13),
-    PlayingCard("Ace", "Clubs", 14)
+    PlayingCard("Jack", "Clubs", 10),
+    PlayingCard("Queen", "Clubs", 10),
+    PlayingCard("King", "Clubs", 10),
+    PlayingCard("Ace", "Clubs", 11)
 };
 
-int myRandomFunction() {
-    srand((int)time(0));
+int randomNumber() {
     int r = (rand() % 52);
     return r;
+}
+
+void playersHand() {
+    /*int firstCard = randomNumber();
+    deckOfCards.at(firstCard).getCardName();
+    int sumOfCards = deckOfCards.at(firstCard).getCardWorth();
+
+    int secondCard = randomNumber();
+    deckOfCards.at(secondCard).getCardName();
+    sumOfCards += deckOfCards.at(secondCard).getCardWorth();
+
+    std::cout << sumOfCards << std::endl; */
+    drawCard();
+}
+
+int botHand() {
+    int botCardOne = randomNumber();
+    int botCardTwo = randomNumber();
+
+    deckOfCards.at(botCardOne).getCardName();
+    int botCardSum = deckOfCards.at(botCardOne).getCardWorth();
+
+    deckOfCards.at(botCardTwo).getCardName();
+    botCardSum += deckOfCards.at(botCardTwo).getCardWorth();
+    return botCardSum;
+}
+
+void drawCard() {
+    int tempInt = randomNumber();
+    deckOfCards.at(tempInt).getCardName();
+    int worthOfCard = deckOfCards.at(tempInt).getCardWorth();
 }

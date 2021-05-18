@@ -14,7 +14,11 @@ PlayingCard::~PlayingCard() {
 }
 
 void PlayingCard::getCardName() {
-    cout << m_name << " of " << m_color << endl;
+    cout << m_name << " of " << m_color << ": " << worth << endl;
+}
+
+int PlayingCard::getCardWorth() {
+    return worth;
 }
 /*
 function to convert worth into name -> Ace has worth 14

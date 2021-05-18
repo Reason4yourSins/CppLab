@@ -1,13 +1,16 @@
 #include <iostream>
+#include <array>
+#include <stdlib.h>
+#include <ctime>
 #include "cards.hxx"
 #include "tryout.hxx"
 using namespace std;
 
-void simulatedEnemy() {
-    
-}
-
 int main(int argc, const char** argv) {
-    cout << myRandomFunction() << endl;
+    srand((int)time(NULL));
+    drawCard();
+    drawCard();
+    drawCard();
+    drawCard();
     return 0;
 }

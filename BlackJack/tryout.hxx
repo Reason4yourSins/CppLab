@@ -14,6 +14,7 @@ public:
     PlayingCard(std::string m_name, std::string m_color, int worth);
     ~PlayingCard();
     void getCardName();
+    int getCardWorth();
     // methods are what you can do with the object
 };
 #endif
