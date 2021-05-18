@@ -1,4 +1,4 @@
-#include "tryout.hxx"
+#include "playingCard.hxx"
 // #include <vector>
 #include <iostream>
 #include <array>
@@ -68,17 +68,15 @@ int randomNumber() {
     return r;
 }
 
+PlayingCard drawCard() {
+    int tempInt = randomNumber();
+    int worthOfCard = deckOfCards.at(tempInt).getCardWorth();
+    return deckOfCards.at(tempInt);
+}
+
 void playersHand() {
-    /*int firstCard = randomNumber();
-    deckOfCards.at(firstCard).getCardName();
-    int sumOfCards = deckOfCards.at(firstCard).getCardWorth();
-
-    int secondCard = randomNumber();
-    deckOfCards.at(secondCard).getCardName();
-    sumOfCards += deckOfCards.at(secondCard).getCardWorth();
-
-    std::cout << sumOfCards << std::endl; */
-    drawCard();
+    PlayingCard drawnCard = drawCard();
+    std::cout << drawnCard << std::endl;
 }
 
 int botHand() {
@@ -91,10 +89,4 @@ int botHand() {
     deckOfCards.at(botCardTwo).getCardName();
     botCardSum += deckOfCards.at(botCardTwo).getCardWorth();
     return botCardSum;
-}
-
-void drawCard() {
-    int tempInt = randomNumber();
-    deckOfCards.at(tempInt).getCardName();
-    int worthOfCard = deckOfCards.at(tempInt).getCardWorth();
 }

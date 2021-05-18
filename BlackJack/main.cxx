@@ -3,14 +3,11 @@
 #include <stdlib.h>
 #include <ctime>
 #include "cards.hxx"
-#include "tryout.hxx"
+#include "playingCard.hxx"
 using namespace std;
 
 int main(int argc, const char** argv) {
     srand((int)time(NULL));
-    drawCard();
-    drawCard();
-    drawCard();
-    drawCard();
+    playersHand();
     return 0;
 }

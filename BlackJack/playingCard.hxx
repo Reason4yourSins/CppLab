@@ -1,5 +1,5 @@
-#ifndef TRYOUT
-#define TRYOUT
+#ifndef playingCard
+#define playingCard
 #include <string>
 
 class PlayingCard {
