@@ -1,10 +1,8 @@
-#ifndef CARDS
-#define CARDS
+#ifndef DECKANDHANDS
+#define DECKANDHANDS
 #include "playingCard.hxx"
-#include <iostream>
 #include <array>
-#include <string>
-#include <cstdlib>
+#include <vector>
 
 std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Two", "Hearts", 2),
@@ -61,13 +59,5 @@ std::array<PlayingCard, 52> deckOfCards = {
     PlayingCard("Ace", "Clubs", 11)
 };
 
-int randomNumber() {
-    int r = (rand() % 52);
-    return r;
-}
-
-PlayingCard drawCard() {
-    int tempInt = randomNumber();
-    return deckOfCards.at(tempInt);
-}
+std::vector<PlayingCard> handOfPlayer = {};
 #endif

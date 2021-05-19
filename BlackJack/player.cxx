@@ -1,11 +1,10 @@
 #include "playingCard.hxx"
 #include "player.hxx"
-#include "cards.hxx"
+#include "deckAndHands.hxx"
+#include "funs.hxx"
 #include <vector>
 
-Player::Player(std::vector<PlayingCard> handOfPlayer) {
-    this->handOfPlayer = handOfPlayer;
-}
+Player::Player() {};
 
 Player::~Player() {};
 /*
@@ -25,6 +24,6 @@ int Player::worthOfCurrentCards() {
 
 void Player::displayCards() {
     for (PlayingCard card : handOfPlayer) {
-        std::cout << card << std::endl;
+        std::cout << card;
     }
 }

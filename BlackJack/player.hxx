@@ -5,10 +5,9 @@
 
 class Player {
     private:
-        std::vector<PlayingCard> handOfPlayer = {};
-
+        
     public:
-        Player(std::vector<PlayingCard> handOfPlayer);
+        Player();
         ~Player();
         void addCardToHand();
         int worthOfCurrentCards();
