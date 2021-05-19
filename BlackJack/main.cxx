@@ -10,5 +10,7 @@ using namespace std;
 int main(int argc, const char** argv) {
     srand((int)time(NULL));
     cout << "Nothing here yet..." << endl;
+    Player playerOne;
+    playerOne.addCardToHand();
     return 0;
 }

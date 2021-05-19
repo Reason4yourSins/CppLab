@@ -8,7 +8,7 @@ class Player {
         std::vector<PlayingCard> handOfPlayer = {};
 
     public:
-        Player(std::vector<PlayingCard> handOfPlaye);
+        Player(std::vector<PlayingCard> handOfPlayer);
         ~Player();
         void addCardToHand();
         int worthOfCurrentCards();

@@ -13,14 +13,18 @@ printing of custom types -> playingCard.cxx line 23
 */
 void Player::addCardToHand() {
     handOfPlayer.push_back(drawCard());
-    std::cout << handOfPlayer[0] << std::endl;
 }
 
 int Player::worthOfCurrentCards() {
-    handOfPlayer[0].getCardWorth();
-    return 0;
+    int sumOfCards = 0;
+    for (PlayingCard card : handOfPlayer) {
+        sumOfCards += card.getCardWorth();
+    }
+    return sumOfCards;
 }
 
 void Player::displayCards() {
-    std::cout << "Empty stuff" << std::endl;
+    for (PlayingCard card : handOfPlayer) {
+        std::cout << card << std::endl;
+    }
 }
