@@ -1,1 +1,1 @@
-g++ -o blackjack main.cxx playingCard.cxx player.cxx
+g++ -o blackjack main.cxx playingCard.cxx player.cxx bot.cxx

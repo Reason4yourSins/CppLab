@@ -4,13 +4,12 @@
 #include <vector>
 
 class Player {
-    private:
-        
     public:
         Player();
         ~Player();
         void addCardToHand();
         int worthOfCurrentCards();
         void displayCards();
+        void firstRoundPlayer();
 };
 #endif

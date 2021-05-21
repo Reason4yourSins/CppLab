@@ -1,24 +1,38 @@
 #include "playingCard.hxx"
 #include "bot.hxx"
-#include "cards.hxx"
+#include "deckAndHands.hxx"
+#include "funs.hxx"
 #include <vector>
+#include <iostream>
 
-Bot::Bot(std::vector<PlayingCard> handOfBot) {
-    this->handOfBot = handOfBot;
-}
+Bot::Bot() {};
 
 Bot::~Bot() {};
 
 void Bot::addCardToHand() {
     handOfBot.push_back(drawCard());
-    std::cout << handOfBot[0] << std::endl;
 }
 
 int Bot::worthOfCurrentCards() {
-    handOfBot[0].getCardWorth();
-    return 0;
+    int sumOfCards = 0;
+    for(PlayingCard card : handOfBot) {
+        sumOfCards += card.getCardWorth();
+    }
+    return sumOfCards;
 }
 
 void Bot::displayCards() {
-    std::cout << "Empty stuff" << std::endl;
+    for (PlayingCard card : handOfBot) {
+        std::cout << card;
+    }
+}
+
+void Bot::firstRoundBot() {
+    int sumOfCurrentBot = 0;
+    Bot botOne;
+    botOne.addCardToHand();
+    botOne.addCardToHand();
+    botOne.displayCards();
+    sumOfCurrentBot += botOne.worthOfCurrentCards();
+    std::cout << sumOfCurrentBot << std::endl;
 }

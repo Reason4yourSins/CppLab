@@ -4,14 +4,12 @@
 #include <vector>
 
 class Bot {
-    private:
-        std::vector<PlayingCard> handOfBot = {};
-
     public:
-        Bot(std::vector<PlayingCard> handOfBot);
+        Bot();
         ~Bot();
         void addCardToHand();
         int worthOfCurrentCards();
         void displayCards();
+        void firstRoundBot();
 };
 #endif

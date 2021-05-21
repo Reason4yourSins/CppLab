@@ -1,16 +1,8 @@
-#ifndef FUNS
-#define FUNS
+#pragma once
 #include <cstdlib>
-#include <iostream>
 #include "playingCard.hxx"
 
-int randomNumber() {
-    int r = (rand() % 52);
-    return r;
-}
+// can use inline for small functions
+/*inline*/ int randomNumber();
 
-PlayingCard drawCard() {
-    int tempInt = randomNumber();
-    return deckOfCards.at(tempInt);
-}
-#endif
+/*inline*/ PlayingCard drawCard();

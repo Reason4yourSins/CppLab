@@ -3,6 +3,7 @@
 #include "deckAndHands.hxx"
 #include "funs.hxx"
 #include <vector>
+#include <iostream>
 
 Player::Player() {};
 
@@ -26,4 +27,15 @@ void Player::displayCards() {
     for (PlayingCard card : handOfPlayer) {
         std::cout << card;
     }
+}
+
+// instance is implicit
+void Player::firstRoundPlayer() {
+    std::cout << "Welcome to my shitty BlackJack!" << std::endl;
+    int sumOfCurrentHand = 0;
+    this->addCardToHand();
+    this->addCardToHand();
+    this->displayCards();
+    sumOfCurrentHand += this->worthOfCurrentCards();
+    std::cout << sumOfCurrentHand << std::endl;
 }
