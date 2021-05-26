@@ -4,11 +4,14 @@
 #include "playingCard.hxx"
 #include "funs.hxx"
 #include "player.hxx"
-
+//{}
 int main(int argc, const char** argv) {
     srand((int)time(NULL));
     Player player;
-    player.firstRoundPlayer();
-    //firstRoundBot();
+    if ((player.firstRoundPlayer()) == 1)
+    {
+        std::cout << "You won!" << std::endl;
+        return 0;        
+    }
     return 0;
 }

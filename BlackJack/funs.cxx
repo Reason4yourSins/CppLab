@@ -13,3 +13,7 @@ PlayingCard drawCard() {
     int tempInt = randomNumber();
     return deckOfCards.at(tempInt);
 }
+// func to check of Hand worth is 21
+int isTwentyOne() {
+    
+}

@@ -30,12 +30,18 @@ void Player::displayCards() {
 }
 
 // instance is implicit
-void Player::firstRoundPlayer() {
+int Player::firstRoundPlayer() {
     std::cout << "Welcome to my shitty BlackJack!" << std::endl;
     int sumOfCurrentHand = 0;
     this->addCardToHand();
     this->addCardToHand();
     this->displayCards();
     sumOfCurrentHand += this->worthOfCurrentCards();
+    if (sumOfCurrentHand == 21) {
+        std::cout << sumOfCurrentHand << " ";
+        std::cout << "BlackJack" << std::endl;
+        return 1;
+    }
     std::cout << sumOfCurrentHand << std::endl;
+    return 0;
 }

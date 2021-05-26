@@ -10,6 +10,6 @@ class Player {
         void addCardToHand();
         int worthOfCurrentCards();
         void displayCards();
-        void firstRoundPlayer();
+        int firstRoundPlayer();
 };
 #endif
