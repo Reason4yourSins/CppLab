@@ -3,6 +3,7 @@
 #include "funs.hxx"
 #include "deckAndHands.hxx"
 #include <array>
+#include <iostream>
 
 int randomNumber() {
     int r = (rand() % 52);
@@ -12,8 +13,4 @@ int randomNumber() {
 PlayingCard drawCard() {
     int tempInt = randomNumber();
     return deckOfCards.at(tempInt);
-}
-// func to check of Hand worth is 21
-int isTwentyOne() {
-    
 }
