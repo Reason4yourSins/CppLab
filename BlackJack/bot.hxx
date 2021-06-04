@@ -10,6 +10,6 @@ class Bot {
         void addCardToHand();
         int worthOfCurrentCards();
         void displayCards();
-        void firstRoundBot();
+        int firstRoundBot();
 };
 #endif

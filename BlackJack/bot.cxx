@@ -27,12 +27,14 @@ void Bot::displayCards() {
     }
 }
 
-void Bot::firstRoundBot() {
+int Bot::firstRoundBot() {
     int sumOfCurrentBot = 0;
     Bot botOne;
     botOne.addCardToHand();
     botOne.addCardToHand();
-    botOne.displayCards();
     sumOfCurrentBot += botOne.worthOfCurrentCards();
-    std::cout << sumOfCurrentBot << std::endl;
+    if (sumOfCurrentBot == 21) {
+        return 1;
+    }
+    return 0;
 }

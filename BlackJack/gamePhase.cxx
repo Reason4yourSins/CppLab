@@ -1,9 +1,8 @@
 #include "gamePhase.hxx"
+#include <iostream>
 
-void gamePhase::userOutput() {
-
-}
-
-void gamePhase::gameOver() {
-    
+int gamePhase::gameOver() {
+    std::cout << "Game is done everyone" << std::endl;
+    stillPlaying = false;
+    return 1;
 }
